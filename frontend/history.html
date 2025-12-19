@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScoreUp: Practice History</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <h1>ScoreUp</h1>
+        <p>Your Personalized Adaptive Study Companion</p>
+        
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html" class="nav-btn">Generate Questions</a></li>
+                <li><a href="history.html" class="nav-btn active">Practice History</a></li>
+                <li><a href="dashboard.html" class="nav-btn">My Progress</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="practice-history" class="card">
+            <h2>Your Practice History</h2>
+            <div id="historyList">
+                <p class="placeholder-text">Completed questions and feedback will appear here.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ScoreUp. Built with ❤️ for the Hackathon.</p>
+        <button id="resetDataBtn" class="utility-btn">Reset All My Data</button>
+    </footer>
+
+    <!-- History Detail Modal -->
+    <div id="historyDetailModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Practice Item Details</h3>
+            <div id="modalContent">
+                <!-- Details loaded here by JS -->
+            </div>
+            <button id="retryQuestionBtn" class="primary-btn">Retry This Question</button>
+            <button class="secondary-btn modal-close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Link to common storage utilities FIRST -->
+    <script src="static/storage-util.js" defer></script>
+    <!-- Link to the specific JavaScript for this page -->
+    <script src="static/history-script.js" defer></script>
+</body>
+</html>
